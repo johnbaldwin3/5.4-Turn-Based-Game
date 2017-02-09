@@ -57,11 +57,13 @@ var views = require('../scripts/views.js');
   //after player selects action
 $('.fight-btn').on('click', function (){
   console.log("clicked");
-
+  setTimeout(200, function (){});
   models.goodguy.attack();
   console.log(models.badguy.health);
   views.enemyView(models.badguy);
+  setTimeout(200,models.badguy.attack());
   console.log("goodguy attacked");
+  views.heroView(models.goodguy);
 });
 //
 // function attackEnemy (character){
