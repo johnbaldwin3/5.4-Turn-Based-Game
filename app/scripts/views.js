@@ -6,6 +6,7 @@ var models = require('../scripts/models');
 
 var heroTemplate = require('../templates/hero.hbs');
 var enemyTemplate = require('../templates/enemy.hbs');
+
 console.log(models.badguy);
 console.log(models.goodguy);
 //Enemy Display
