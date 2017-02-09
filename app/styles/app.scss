@@ -16,6 +16,14 @@ img {
   max-width: 100%;
 }
 
+body{
+  color:white;
+}
+
+.container{
+  background-color: #2c81a5;
+}
+
 h1{
   text-align: center;
 }
@@ -33,14 +41,18 @@ h1{
 }
 
 .health-bar{
-  background-color: red;
+  background-color: #b72828;
 }
 
 .option-menu{
   border: 1px solid #333333;
-  background-color: blue;
 }
 
 .moves{
   color: white;
+}
+
+.combat-log{
+  border: 1px solid #FFFFFF;
+  color:white;
 }
