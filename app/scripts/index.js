@@ -1,4 +1,6 @@
 //console.log("Hello World!");
+var models = require('../scripts/models');
+
 
 /***********************************
 //game start
@@ -77,3 +79,6 @@
 // show stats?
 // on play again, take user back to selection screen
 // on end game, take player to start/splash page
+// console.log("Hello World!");
+
+// create
