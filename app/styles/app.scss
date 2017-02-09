@@ -15,3 +15,32 @@ $icon-font-path: '../../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
 img {
   max-width: 100%;
 }
+
+h1{
+  text-align: center;
+}
+
+.player-option{
+  border: 1px solid #333333;
+}
+
+.enemy-info{
+  border: 1px solid #333333;
+}
+
+.hero-info{
+  border: 1px solid #333333;
+}
+
+.health-bar{
+  background-color: red;
+}
+
+.option-menu{
+  border: 1px solid #333333;
+  background-color: blue;
+}
+
+.moves{
+  color: white;
+}
