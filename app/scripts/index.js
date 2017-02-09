@@ -1,6 +1,13 @@
 //console.log("Hello World!");
 var models = require('../scripts/models');
+var $ = require('jquery');
+var _ = require('underscore');
+var Handlebars = require('handlebars');
+var index = require('../scripts/index.js');
+var views = require('../scripts/views.js');
 
+// var hero = require('app/templates/hero.hbs');
+// var enemy = require('../templates/enemy.hbs');
 
 /***********************************
 //game start
@@ -11,7 +18,7 @@ var models = require('../scripts/models');
   //cue music?
   //direct to player selection screen
     //click button to go
-    
+
 /***********************************
 //player select
 ***********************************/

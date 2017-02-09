@@ -1,7 +1,11 @@
 var $ = require('jquery');
 var _ = require('underscore');
 var Handlebars = require('handlebars');
-var index = require('../scripts/index.js')
+var index = require('../scripts/index.js');
+
+var hero = require('../templates/hero.hbs');
+var enemy = require('../templates/enemy.hbs');
+
 
 //***********************************
 
@@ -45,7 +49,7 @@ Hero.new = function() {
 // Hero create Test
 var goodguy = Hero.new();
 goodguy.name = 'good guy';
-console.log("name",goodguy.name,"health",goodguy.health);
+// console.log("name",goodguy.name,"health",goodguy.health);
 
 
 
@@ -67,6 +71,12 @@ Villain.new = function() {
   return new Villain();
 };
 // Hero create Test
-var badguy = Hero.new();
+var badguy = Villain.new();
 badguy.name = 'bad guy';
+console.log(badguy);
 console.log("name",badguy.name,"health", badguy.health);
+
+module.exports = {
+  'goodguy': goodguy,
+  'badguy': badguy
+};
