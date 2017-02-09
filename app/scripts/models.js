@@ -73,8 +73,8 @@ Villain.new = function() {
 // Hero create Test
 var badguy = Villain.new();
 badguy.name = 'bad guy';
-console.log(badguy);
-console.log("name",badguy.name,"health", badguy.health);
+// console.log(badguy);
+// console.log("name",badguy.name,"health", badguy.health);
 
 module.exports = {
   'goodguy': goodguy,

@@ -55,7 +55,18 @@ var views = require('../scripts/views.js');
 
 //player must select fight action
   //after player selects action
-
+$('#enemy-info').on('mouseover', function (){
+  console.log("clicked");
+  attackEnemy(models.badguy);
+});
+function attackEnemy (character){
+  console.log(models.badguy.health, models.goodguy.health);
+  character.health -=25;
+  console.log(models.badguy.health, models.goodguy.health);
+  views.enemyView(character);
+  return character.health;
+}
+// attackEnemy(models.badguy);
 //begin attack
   //set some interval timeout to prevent immediate attack by enemy
 

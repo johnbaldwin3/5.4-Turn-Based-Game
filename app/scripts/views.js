@@ -10,13 +10,18 @@ console.log(models.badguy);
 console.log(models.goodguy);
 //Enemy Display
 function enemyView(character){
-  console.log(character);
-  $('.enemy-info').append(enemyTemplate(character));
+  // console.log(character);
+  $('.enemy-info').html(enemyTemplate(character));
 }
 //Hero Display
 function heroView(character){
-  console.log(character);
-  $('.hero-info').append(heroTemplate(character));
+  // console.log(character);
+  $('.hero-info').html(heroTemplate(character));
 }
 console.log(enemyView(models.badguy));
 console.log(heroView(models.goodguy));
+
+module.exports = {
+  'enemyView': enemyView,
+  'heroView': heroView
+};
