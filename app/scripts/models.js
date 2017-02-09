@@ -43,10 +43,9 @@ Hero.new = function() {
   return new Hero();
 };
 // Hero create Test
-var elonMusk = Hero.new();
-elonMusk.name = 'elonMusk';
-console.log(elonMusk.name);
-console.log(elonMusk.health);
+var goodguy = Hero.new();
+goodguy.name = 'good guy';
+console.log("name",goodguy.name,"health",goodguy.health);
 
 
 
@@ -67,3 +66,7 @@ Villain.prototype = new Character();
 Villain.new = function() {
   return new Villain();
 };
+// Hero create Test
+var badguy = Hero.new();
+badguy.name = 'bad guy';
+console.log("name",badguy.name,"health", badguy.health);
