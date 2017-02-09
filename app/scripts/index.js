@@ -55,17 +55,32 @@ var views = require('../scripts/views.js');
 
 //player must select fight action
   //after player selects action
-$('#enemy-info').on('mouseover', function (){
+$('.fight-btn').on('click', function (){
   console.log("clicked");
-  attackEnemy(models.badguy);
+
+  models.goodguy.attack();
+  console.log(models.badguy.health);
+  views.enemyView(models.badguy);
+  console.log("goodguy attacked");
 });
-function attackEnemy (character){
-  console.log(models.badguy.health, models.goodguy.health);
-  character.health -=25;
-  console.log(models.badguy.health, models.goodguy.health);
-  views.enemyView(character);
-  return character.health;
-}
+//
+// function attackEnemy (character){
+//   console.log(models.badguy.health, models.goodguy.health);
+//   character.health -=25;
+//   console.log(models.badguy.health, models.goodguy.health);
+//   views.enemyView(character);
+//   // models.goodguy.health -=25;
+//
+//   enemyAttack();
+//   console.log(models.badguy.health, models.goodguy.health);
+//   console.log("goodguy attacked");
+// }
+//
+// function enemyAttack(){
+//   console.log("goodguy attacked");
+//   models.goodguy.health -=25;
+//   // views.heroView(models.goodguy);
+
 // attackEnemy(models.badguy);
 //begin attack
   //set some interval timeout to prevent immediate attack by enemy

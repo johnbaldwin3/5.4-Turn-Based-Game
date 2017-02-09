@@ -48,6 +48,9 @@ Hero.new = function() {
 };
 // Hero create Test
 var goodguy = Hero.new();
+goodguy.attack = function (){
+  badguy.health -= 25;
+};
 goodguy.name = 'good guy';
 // console.log("name",goodguy.name,"health",goodguy.health);
 
@@ -73,6 +76,9 @@ Villain.new = function() {
 // Hero create Test
 var badguy = Villain.new();
 badguy.name = 'bad guy';
+badguy.attack = function (){
+  goodguy.health -= 25;
+};
 // console.log(badguy);
 // console.log("name",badguy.name,"health", badguy.health);
 
