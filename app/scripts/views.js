@@ -8,11 +8,16 @@ var heroTemplate = require('../templates/hero.hbs');
 var enemyTemplate = require('../templates/enemy.hbs');
 var charSelTemp = require('../templates/heroselect.hbs');
 
+
 console.log(models.badguy);
 console.log(models.goodguy);
 function characterSelect(characters){
   $('.character-select').append(charSelTemp());
 }
+
+
+// console.log(models.badguy);
+// console.log(models.goodguy);
 
 //Enemy Display
 function enemyView(character){
@@ -24,10 +29,12 @@ function heroView(character){
   // console.log(character);
   $('.hero-info').html(heroTemplate(character));
 }
-console.log(enemyView(models.badguy));
-console.log(heroView(models.goodguy));
+enemyView(models.badguy);
+heroView(models.goodguy);
 
 module.exports = {
   'enemyView': enemyView,
   'heroView': heroView
 };
+
+// console.log(models.herosArray);
