@@ -6,6 +6,7 @@ $icon-font-path: '../../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
 @import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
 
 
+
 *,
 *::before,
 *::after {
@@ -60,4 +61,30 @@ h1{
 .combat-log{
   border: 1px solid #FFFFFF;
   color:white;
+}
+
+/***********************************
+//SPLASH HTML PAGE STYLINGS
+***********************************/
+
+
+.background-splash {
+
+  color: red;
+  background-size: cover;
+  background-image: url('../images/backgroundhall.jpeg');
+  // background-image: cover;
+
+}
+.splash-header {
+  font-size: 50px;
+}
+.subheader {
+  color: white;
+  text-align: center;
+}
+
+.intro-button-div {
+  margin: 0 auto;
+  text-align: center;
 }
