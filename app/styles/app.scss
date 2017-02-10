@@ -108,6 +108,7 @@ h1{
   color: red;
 }
 
+
 .player-option{
   padding:10px;
 }
@@ -161,4 +162,10 @@ h1{
 
 .speed{
   background-color: #d6ed2d;
+
+.char-select-body {
+  background-image: url('../images/select-screen.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+
 }
