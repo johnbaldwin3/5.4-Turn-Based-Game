@@ -15,7 +15,7 @@ var views = require('../scripts/views.js');
 
 //start game
   //select button and direct to new page
-  
+
   //cue music?
   //direct to player selection screen
     //click button to go
@@ -60,7 +60,7 @@ var views = require('../scripts/views.js');
 $('.fight-btn').on('click', function (){
   models.goodguy.attack();
   views.enemyView(models.badguy);
-  setTimeout(function(){counterAttack()}, 4000);
+  setTimeout(function(){counterAttack();}, 4000);
 });
 
 function counterAttack(){
