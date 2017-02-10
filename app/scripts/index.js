@@ -44,7 +44,6 @@ var views = require('../scripts/views.js');
 
 //display player/hero
   //display health
-
 $('.character-select').on('click','.hero-select', function (event){
   event.preventDefault();
   console.log(this);
@@ -54,9 +53,10 @@ $('.character-select').on('click','.hero-select', function (event){
   console.log(selected);
   // console.log(models.goodguy);
 
-  // setTimeout(function() {
-  //    window.location = url;
-  // }, 500);
+  setTimeout(function() {
+     window.location = url;
+  }, 500);
+
 });
 
 // goodguy = $heroArray.Hero.name
