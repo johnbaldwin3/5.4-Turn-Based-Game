@@ -6,9 +6,14 @@ var models = require('../scripts/models');
 
 var heroTemplate = require('../templates/hero.hbs');
 var enemyTemplate = require('../templates/enemy.hbs');
+var charSelTemp = require('../templates/heroselect.hbs');
 
 console.log(models.badguy);
 console.log(models.goodguy);
+function characterSelect(characters){
+  $('.character-select').append(charSelTemp());
+}
+
 //Enemy Display
 function enemyView(character){
   // console.log(character);
