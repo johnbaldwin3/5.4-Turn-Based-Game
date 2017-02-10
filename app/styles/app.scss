@@ -108,16 +108,42 @@ h1{
   color: red;
 }
 
+.player-option{
+  padding:10px;
+}
+
 .character-stats{
 
+}
+
+.character-type{
+
+}
+
+.character-name{
+
+}
+
+.name-tile{
+  display: inline-block;
+}
+
+.name-info{
+  display: inline-block;
+  width: 100%
+}
+
+.char-pic{
+  display: inline-block;
+  float: right;
 }
 
 .stat{
   border:1px solid black;
   display: inline-block;
-  margin-left:2%;
-  margin-right:2%;
-  width:44%;
+  // margin-left:2%;
+  // margin-right:2%;
+  width:49.4%;
   height:40px;
 }
 
@@ -134,5 +160,5 @@ h1{
 }
 
 .speed{
-  background-color: yellow;
+  background-color: #d6ed2d;
 }
