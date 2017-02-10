@@ -107,3 +107,32 @@ h1{
 .character-select-title{
   color: red;
 }
+
+.character-stats{
+
+}
+
+.stat{
+  border:1px solid black;
+  display: inline-block;
+  margin-left:2%;
+  margin-right:2%;
+  width:44%;
+  height:40px;
+}
+
+.health{
+  background-color: red;
+}
+
+.power{
+  background-color: orange;
+}
+
+.defense{
+  background-color: purple;
+}
+
+.speed{
+  background-color: yellow;
+}
