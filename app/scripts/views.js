@@ -11,9 +11,10 @@ var charSelTemp = require('../templates/heroselect.hbs');
 
 console.log(models.badguy);
 console.log(models.goodguy);
-function characterSelect(characters){
-  $('.character-select').append(charSelTemp());
-}
+
+_.forEach(models.herosArray, function characterSelect(characters){
+  $('.character-select').append(charSelTemp(characters));
+});
 
 
 // console.log(models.badguy);
