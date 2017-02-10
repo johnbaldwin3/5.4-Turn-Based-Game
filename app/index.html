@@ -1,75 +1,25 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
-    <title>5 4 Turn Based Game</title>
+    <title>Splash Intro - Fight Land</title>
     <link rel="stylesheet" href="css/app.css">
   </head>
-  <body>
-    <div class="wrapper">
-      <div class="container">
-        <div class="row">
-          <button><a href="splash.html">Splash</a></button>
-          <button><a href="select.html">Select</a></button>
-          <div class="col-md-12">
-            <div class="titlecard">
-              <h1>Fight World</h1>
-            </div>
-          </div>
-        </div>
-        <!-- Enemy Info  -->
-        <div class="row">
-          <div class="col-md-4">
-            <!-- This will be in a handlebars template -->
-            <div class="enemy-info">
-              <!-- <h2>Enemy Name</h2>
-              <h4>Enemy Info</h4>
-              <div class="enemy-health">
-                Enemy Health Here
-              </div> -->
-            </div>
-          </div>
-          <div class="col-md-8">
-            <div class="enemy-pic">
-              <img src="http://unsplash.it/501/251" alt="">
-            </div>
-          </div>
-        </div>
-        <!-- Player Info -->
-        <div class="row">
-          <div class="col-md-8">
-            <img src="http://unsplash.it/500/250" alt="">
-          </div>
-          <div class="col-md-4">
-            <!-- This info will be in a handlebars template -->
-            <div class="hero-info">
-              <!-- <h2>Player Name</h2>
-              <h4>Player Info</h4>
-              <div class="health-bar">
-                Health Amount Here -->
-              </div>
-              <div class="option-menu">
-                <button type="button" name="button" class="button fight-btn">Fight!</button>
-                <div class="moves">Item</div>
-                <div class="moves">Magic</div>
-                <div class="moves">Run</div>
-              </div>
-            </div>
-          </div>
-          <!-- Combat Log -->
-        <div class="row">
-          <div class="col-md-12">
-            <div class="combat-log">
-              <ul>
-                <li>Last Action</li>
-                <li>Next to Last Action</li>
-                <li>another Action</li>
-              </ul>
-            </div>
-          </div>
-        </div>
+  <body class="background-splash">
+    <div class=" wrapper">
+      <h1 class="splash-header">Welcome to Fight Land</h1>
+
+      <h2 class="subheader">Click To Get Started...</h2>
+      <div class="intro-button-div">
+        <button class="into-game"><a href="select.html">Fight...(select char screen)</a></button>
+
       </div>
+      <div class="intro-button-div">
+        <button><a href="fight.html">to fight screen</a></button>
+      </div>
+
+
     </div>
     <script src="js/bundle.js"></script>
   </body>

@@ -14,6 +14,7 @@ console.log(models.goodguy);
 
 _.forEach(models.herosArray, function characterSelect(characters){
   $('.character-select').append(charSelTemp(characters));
+  console.log("i've been called");
 });
 
 

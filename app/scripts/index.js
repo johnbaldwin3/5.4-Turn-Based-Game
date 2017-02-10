@@ -25,6 +25,7 @@ var views = require('../scripts/views.js');
 ***********************************/
 
 //select player page
+
   //dropdown or panel page
   //select player chosen by user
 

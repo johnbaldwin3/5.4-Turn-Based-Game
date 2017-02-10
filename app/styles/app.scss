@@ -5,7 +5,9 @@ $icon-font-path: '../../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
 // Import Bootstrap
 @import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
 
-
+/***********************************
+//FIGHT HTML SCREEN
+***********************************/
 
 *,
 *::before,
@@ -21,7 +23,7 @@ body{
   color:white;
 }
 
-.container{
+.fight-screen{
   background-color: #2c81a5;
 }
 
@@ -39,6 +41,7 @@ h1{
 
 .enemy-pic{
   float: right;
+
 }
 
 .hero-info{
@@ -64,7 +67,7 @@ h1{
 }
 
 /***********************************
-//SPLASH HTML PAGE STYLINGS
+//INTRO / INDEX PAGE STYLINGS
 ***********************************/
 
 
@@ -90,7 +93,7 @@ h1{
 }
 
 .into-game {
-  width: 100px;
+  width: 200px;
   background: linear-gradient( red, red 30%, black);
     a{
       font-size: 18px;
@@ -110,7 +113,14 @@ h1{
 
 
 .player-option{
-  padding:10px;
+  background-color: rgba(9, 9, 9, 0.59);  padding:10px;
+  box-shadow: 1px 1px 8px #fff;
+  margin-bottom: 30px;
+}
+
+.player-option:hover {
+  background-color: rgba(82, 77, 77, 0.7);  padding:10px;
+  box-shadow: 1px 1px 15px #bdde90;
 }
 
 .character-stats{
@@ -137,6 +147,9 @@ h1{
 .char-pic{
   display: inline-block;
   float: right;
+  img {
+    max-height: 150px;
+  }
 }
 
 .stat{
