@@ -15,6 +15,7 @@ var views = require('../scripts/views.js');
 
 //start game
   //select button and direct to new page
+  
   //cue music?
   //direct to player selection screen
     //click button to go
@@ -55,7 +56,7 @@ var views = require('../scripts/views.js');
 
 //player must select fight action
   //after player selects action
-  
+
 $('.fight-btn').on('click', function (){
   models.goodguy.attack();
   views.enemyView(models.badguy);

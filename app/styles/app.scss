@@ -88,3 +88,14 @@ h1{
   margin: 0 auto;
   text-align: center;
 }
+
+.into-game {
+  width: 100px;
+  background: linear-gradient( red, red 30%, black);
+    a{
+      font-size: 18px;
+      font-weight: 600;
+      color: white;
+      text-decoration: none;
+    }
+}
