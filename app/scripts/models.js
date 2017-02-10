@@ -19,7 +19,7 @@ function Character(config) {
   var defaults = {
     name: "Character",
     health: 100,
-    attack: 100,
+    power: Math.random(),
     defense: 100,
     speed: 100
   };
@@ -49,7 +49,7 @@ Hero.new = function() {
 // Hero create Test
 var goodguy = Hero.new();
 goodguy.attack = function (){
-  badguy.health -= 25;
+  badguy.health -= Math.floor(15 * this.power);
 };
 goodguy.name = 'good guy';
 // console.log("name",goodguy.name,"health",goodguy.health);
@@ -77,7 +77,7 @@ Villain.new = function() {
 var badguy = Villain.new();
 badguy.name = 'bad guy';
 badguy.attack = function (){
-  goodguy.health -= 25;
+  goodguy.health -= Math.floor(15 * this.power);
 };
 // console.log(badguy);
 // console.log("name",badguy.name,"health", badguy.health);
