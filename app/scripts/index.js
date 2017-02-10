@@ -44,19 +44,26 @@ var views = require('../scripts/views.js');
 
 //display player/hero
   //display health
+  
 $('.character-select').on('click','.hero-select', function (event){
   event.preventDefault();
-  console.log(this);
+  // console.log(this);
   var url = $(this).attr("href");
   var selected = $(this).attr("id");
-  // models.goodguy = selected;
-  console.log(selected);
+  console.log("ss",selected);
+
+  models.goodguy = models[selected];
+  console.log("goodguy", models.goodguy);
+  // console.log('gGuy', gGuy);
   // console.log(models.goodguy);
+  // views.heroView(models.goodguy);
+  // views.heroView(models.goodguy);
+  views.heroView(models.goodguy);
 
-  setTimeout(function() {
-     window.location = url;
-  }, 500);
-
+  // setTimeout(function() {
+  //    window.location = url;
+  //
+  // }, 500);
 });
 
 // goodguy = $heroArray.Hero.name
