@@ -45,16 +45,21 @@ var views = require('../scripts/views.js');
 //display player/hero
   //display health
 
-$('.hero-select').on('click', function (event){
+$('.character-select').on('click','.hero-select', function (event){
   event.preventDefault();
-  console.log("clicked");
+  console.log(this);
   var url = $(this).attr("href");
-  
-  setTimeout(function() {
-     window.location = url;
-  }, 500);
+  var selected = $(this).attr("id");
+  // models.goodguy = selected;
+  console.log(selected);
+  // console.log(models.goodguy);
+
+  // setTimeout(function() {
+  //    window.location = url;
+  // }, 500);
 });
 
+// goodguy = $heroArray.Hero.name
 
 
 //display the enemy
