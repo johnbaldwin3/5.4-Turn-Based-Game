@@ -45,6 +45,18 @@ var views = require('../scripts/views.js');
 //display player/hero
   //display health
 
+$('.hero-select').on('click', function (event){
+  event.preventDefault();
+  console.log("clicked");
+  var url = $(this).attr("href");
+  
+  setTimeout(function() {
+     window.location = url;
+  }, 500);
+});
+
+
+
 //display the enemy
   //display some idea/representation of health
 
