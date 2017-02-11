@@ -49,6 +49,7 @@ $('.character-select').on('click','.hero-select', function (event){
   event.preventDefault();
   // console.log(this);
   $('.character-select').fadeOut(5000).hide();
+  $('body').removeClass('.character-select');
   $('.fight-page').fadeIn(5000).show();
 
   var selected = $(this).attr("id");
