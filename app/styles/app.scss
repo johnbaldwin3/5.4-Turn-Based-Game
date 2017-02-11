@@ -49,7 +49,11 @@ h1{
 }
 
 .enemy-info{
-  border: 1px solid #333333;
+  box-shadow: 0px 1px 20px 0px #fd0000;
+  border: 1px solid #bf4141;
+  h2 {
+    text-align: center;
+  }
 }
 
 .enemy-pic{
@@ -58,9 +62,14 @@ h1{
 }
 
 .hero-info{
-
-  border: 1px solid #333333;
+  margin-top: 20px;
+  box-shadow: 0px 4px 19px 1px #86d8f1;
+  border: 1px solid #2b88cc;
+    h2 {
+      text-align: center;
+    }
 }
+
 
 .health-bar{
   background-color: #b72828;
@@ -135,8 +144,12 @@ h1{
 * Character Select
 **************************************/
 
-.character-select-title{
-  color: red;
+.character-select-title {
+  font-family: 'Monoton', cursive;
+    letter-spacing: 2px;
+    color: red;
+    word-spacing: 16px;
+    text-shadow: 1px 11px 20px rgba(255, 0, 0, 0.69);
 }
 
 
