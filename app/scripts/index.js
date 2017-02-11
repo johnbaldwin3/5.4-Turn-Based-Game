@@ -93,13 +93,13 @@ views.enemyView(currentVillain);
   //after player selects action
 
 $('.fight-btn').on('click', function (){
-  models.goodguy.attack();
-  views.enemyView(models.badguy);
+  models.goodguy.attack(currentVillain);
+  views.enemyView(currentVillain);
   setTimeout(function(){counterAttack();}, 4000);
 });
 
 function counterAttack(){
-  models.badguy.attack();
+  currentVillain.attack(models.goodguy);
   views.heroView(models.goodguy);
 }
 //

@@ -35,8 +35,8 @@ function Character(config) {
 function Hero(config) {
 
   var defaults = {name: "I'm a hero"};
-  this.attack = function (){
-    badguy.health -= Math.floor(15 * this.power);
+  this.attack = function (target){
+    target.health -= Math.floor(15 * this.power);
 
   // hero should have name
   // health variable?? or just same as default??
@@ -69,6 +69,7 @@ var goodguy = new Hero();
 // console.log("jock",jock)
 // Hero's List
 var jock = new Hero();
+jock.name = "jock";
 jock.displayName = "Brad";
 jock.image = "https://pbs.twimg.com/profile_images/1303351825/8bit-JaredFace_400x400.jpg";
 var rebel = new Hero();
@@ -105,6 +106,9 @@ Villain.new = function() {
   return new Villain();
 };
 
+Villain.prototype.attack = function (target){
+  target.health -= Math.floor(15 * this.power);
+};
 // Hero create Test
 var badguy = Villain.new();
 badguy.name = 'bad guy';
