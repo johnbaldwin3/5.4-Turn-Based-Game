@@ -73,7 +73,14 @@ $('.character-select').on('click','.hero-select', function (event){
 
 //display the enemy
   //display some idea/representation of health
-
+var currentVillain = villainRandom(models.villainArray);
+function villainRandom(array){
+  var randomizer = Math.floor(Math.random()*4);
+  console.log(randomizer);
+  return array[randomizer];
+}
+console.log(currentVillain);
+views.enemyView(currentVillain);
 /***********************************
 //Fight, Fight, Fight!
 ***********************************/

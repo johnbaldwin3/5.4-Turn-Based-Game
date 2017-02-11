@@ -49,7 +49,7 @@ function Hero(config) {
   // var character = Character.call(this, config);
   // console.log('character', character);
     $.extend(this, defaults, config);
-}
+};
 }
 
 Hero.prototype = new Character();
@@ -70,11 +70,11 @@ var goodguy = new Hero();
 // Hero's List
 var jock = new Hero();
 jock.displayName = "Brad";
-jock.image = "https://pbs.twimg.com/profile_images/1303351825/8bit-JaredFace_400x400.jpg"
+jock.image = "https://pbs.twimg.com/profile_images/1303351825/8bit-JaredFace_400x400.jpg";
 var rebel = new Hero();
 rebel.name = "rebel";
 rebel.displayName = "James";
-rebel.image = "http://blog.spoongraphics.co.uk/wp-content/uploads/2013/04/pixel-character.jpg"
+rebel.image = "http://blog.spoongraphics.co.uk/wp-content/uploads/2013/04/pixel-character.jpg";
 var prep = new Hero();
 prep.name = "prep";
 prep.displayName = "Tiffany";
@@ -113,12 +113,25 @@ badguy.attack = function (){
 };
 
 // Villains List
-// clown.name = "Pennywise";
+var clown = Villain.new();
+clown.name = "Creepy Clown";
 
+var chainsaw = Villain.new();
+chainsaw.name = "Chainsaw Maniac";
+
+var knives = Villain.new();
+knives.name = "Knife-Hand";
+
+var corpse = Villain.new();
+corpse.name = "Living Corpse";
+
+var villainArray = [clown, chainsaw, knives, corpse];
+console.log(villainArray);
 // console.log(badguy);
 // console.log("name",badguy.name,"health", badguy.health);
 
 module.exports = {
+  'villainArray' : villainArray,
   'herosArray' : herosArray,
   'jock' : jock,
   'rebel' : rebel,
