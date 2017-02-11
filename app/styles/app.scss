@@ -88,15 +88,24 @@ h1{
   color: red;
   background-size: cover;
   background-image: url('../images/backgroundhall.jpeg');
-  // background-image: cover;
+  // background-repeat: no-repeat;
 
 }
 .splash-header {
+  margin-top: 20%;
+  font-family: 'Monoton', cursive;
   font-size: 50px;
+  color: #ff0099;
+  text-shadow: 0px 20px 20px rgba(123, 71, 150, 0.74);
+  letter-spacing: 1px;
+  word-spacing: 14px;
 }
 .subheader {
+  font-family: 'Fascinate Inline', cursive;
+  text-shadow: 0px 20px 20px rgba(123, 71, 150, 0.74);
   color: white;
   text-align: center;
+  margin-bottom: 40px;
 }
 
 .intro-button-div {
@@ -105,10 +114,14 @@ h1{
 }
 
 .into-game {
-  width: 200px;
-  background: linear-gradient( red, red 30%, black);
+  width: 250px;
+  height: 40px;
+  background: linear-gradient(#f400ff 20%, #ff0099 30%, black);
+  border: 1px solid black;
+  box-shadow: -1px 3px 20px 10px rgba(0, 255, 255, 0.22);
     a{
-      font-size: 18px;
+      font-family: 'Nosifer', cursive;
+      font-size: 20px;
       font-weight: 600;
       color: white;
       text-decoration: none;
