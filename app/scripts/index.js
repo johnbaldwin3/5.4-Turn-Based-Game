@@ -5,9 +5,16 @@ var _ = require('underscore');
 var Handlebars = require('handlebars');
 var index = require('../scripts/index.js');
 var views = require('../scripts/views.js');
-
+var $audioIntro = $('#audio-intro');
 // var hero = require('app/templates/hero.hbs');
 // var enemy = require('../templates/enemy.hbs');
+
+// $audioIntro.attr('src', './images/Ascension-Arp-02-copy.mp3');
+//   $audioIntro.play();
+//
+// $('into-game').on('click', function(){
+//   $audioIntro.stop();
+// })
 
 /***********************************
 //game start
@@ -48,9 +55,9 @@ var views = require('../scripts/views.js');
 $('.character-select').on('click','.hero-select', function (event){
   event.preventDefault();
   // console.log(this);
-  $('.character-select').fadeOut(5000).hide();
+  $('.character-select').fadeOut(4000).hide();
   $('body').removeClass('.character-select');
-  $('.fight-page').fadeIn(5000).show();
+  $('.fight-page').fadeIn(4000).show();
 
   var selected = $(this).attr("id");
   console.log("ss",selected);
