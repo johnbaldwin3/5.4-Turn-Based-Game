@@ -9,6 +9,7 @@ var enemyTemplate = require('../templates/enemy.hbs');
 var charSelTemp = require('../templates/heroselect.hbs');
 
 
+// $('.fight-page').html().hide();
 // console.log(models.badguy);
 // console.log(models.goodguy);
 
@@ -20,7 +21,7 @@ _.forEach(models.herosArray, function characterSelect(characters){
 
 // console.log(models.badguy);
 // console.log(models.goodguy);
-
+$('.fight-page').hide();
 //Enemy Display
 function enemyView(character){
   // console.log(character);

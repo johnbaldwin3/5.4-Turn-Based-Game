@@ -44,11 +44,13 @@ var views = require('../scripts/views.js');
 
 //display player/hero
   //display health
-  
+
 $('.character-select').on('click','.hero-select', function (event){
   event.preventDefault();
   // console.log(this);
-  var url = $(this).attr("href");
+  $('.character-select').fadeOut(5000).hide();
+  $('.fight-page').fadeIn(5000).show();
+
   var selected = $(this).attr("id");
   console.log("ss",selected);
 
