@@ -22,7 +22,17 @@ var $audioIntro = $('#audio-intro');
 
 //start game
   //select button and direct to new page
-
+  // $('.into-game').on('click', function(event){
+  //   event.preventDefault();
+  //   var url = "select.html"
+  //   $("#audioIntro").volume = 1;
+  //       $("#audioIntro").animate({volume: 0}, 4000);
+  //   setTimeout(function() {
+  //      window.location = url;
+  //
+  //   }, 3000);
+  //
+  // })
   //cue music?
   //direct to player selection screen
     //click button to go
