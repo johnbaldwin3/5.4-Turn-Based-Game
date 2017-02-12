@@ -34,6 +34,7 @@ function heroView(character){
 }
 
 function endView(){
+  alert('you won, or lost...');
   // location.reload();
 }
 

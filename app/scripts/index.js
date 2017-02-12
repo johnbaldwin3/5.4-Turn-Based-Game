@@ -6,18 +6,9 @@ var Handlebars = require('handlebars');
 var index = require('../scripts/index.js');
 var views = require('../scripts/views.js');
 var $audioIntro = $('#audio-intro');
-// var dice = require('../scripts/randomizer.js');
-// var hero = require('app/templates/hero.hbs');
-// var enemy = require('../templates/enemy.hbs');
 
-// $audioIntro.attr('src', './images/Ascension-Arp-02-copy.mp3');
-//   $audioIntro.play();
-//
-// $('into-game').on('click', function(){
-//   $audioIntro.stop();
-// })
 
-// **************************************
+//************************************
 //  Dice Roller
 // **************************************
 function d4 (){
