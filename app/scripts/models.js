@@ -35,9 +35,9 @@ function Character(config) {
 function Hero(config) {
 
   var defaults = {name: "I'm a hero"};
-  this.attack = function (target){
+  this.attack = function (target, powerMod){
     console.log(target.health);
-    target.health -= Math.floor(10 * this.power);
+    target.health -= Math.floor((10 * this.power + powerMod));
     console.log(target.health);
   // hero should have name
   // health variable?? or just same as default??

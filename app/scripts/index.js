@@ -113,7 +113,7 @@ views.enemyView(currentVillain);
 $('.fight-btn').on('click', function (){
   if (models.goodguy.speed >= currentVillain.speed){
     console.log("hero first");
-    models.goodguy.attack(currentVillain);
+    models.goodguy.attack(currentVillain, 0);
     views.enemyView(currentVillain);
     checkWin();
     counterAttack();
@@ -122,10 +122,55 @@ $('.fight-btn').on('click', function (){
     console.log("hero last");
     counterAttack();
     checkWin();
-    models.goodguy.attack(currentVillain);
+    models.goodguy.attack(currentVillain, 0);
     views.enemyView(currentVillain);
     checkWin();
   }
+});
+
+$('.strong-btn').on('click', function (){
+  if (models.goodguy.speed >= currentVillain.speed){
+    console.log("hero first");
+    models.goodguy.attack(currentVillain, 4);
+    views.enemyView(currentVillain);
+    checkWin();
+    counterAttack();
+    checkWin();
+  } else {
+    console.log("hero last");
+    counterAttack();
+    checkWin();
+    models.goodguy.attack(currentVillain, 4);
+    views.enemyView(currentVillain);
+    checkWin();
+  }
+});
+
+$('.defense-btn').on('click', function (){
+  if (models.goodguy.speed >= currentVillain.speed){
+    console.log("hero first");
+    models.goodguy.attack(currentVillain, -1);
+    views.enemyView(currentVillain);
+    checkWin();
+    counterAttack();
+    checkWin();
+  } else {
+    console.log("hero last");
+    counterAttack();
+    checkWin();
+    models.goodguy.attack(currentVillain, -1);
+    views.enemyView(currentVillain);
+    checkWin();
+  }
+});
+
+$('.quick-btn').on('click', function (){
+  console.log("hero first");
+  models.goodguy.attack(currentVillain, -1);
+  views.enemyView(currentVillain);
+  checkWin();
+  counterAttack();
+  checkWin();
 });
 
 function counterAttack(){
