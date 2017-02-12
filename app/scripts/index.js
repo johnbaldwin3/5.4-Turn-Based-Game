@@ -70,7 +70,7 @@ $('.character-select').on('click','.hero-select', function (event){
   $('.fight-page').fadeIn(4000).show();
 
   var selected = $(this).attr("id");
-  console.log("ss",selected);
+  // console.log("ss",selected);
 
   models.goodguy = models[selected];
   console.log("goodguy", models.goodguy);
@@ -94,7 +94,7 @@ $('.character-select').on('click','.hero-select', function (event){
 var currentVillain = villainRandom(models.villainArray);
 function villainRandom(array){
   var randomizer = Math.floor(Math.random()*4);
-  console.log(randomizer);
+  // console.log(randomizer);
   return array[randomizer];
 }
 console.log(currentVillain);
@@ -111,8 +111,9 @@ views.enemyView(currentVillain);
 
 $('.fight-btn').on('click', function (){
   models.goodguy.attack(currentVillain);
+  console.log("attacking" + currentVillain);
   views.enemyView(currentVillain);
-  setTimeout(function(){counterAttack();}, 4000);
+  setTimeout(function(){counterAttack();}, 500);
 });
 
 function counterAttack(){

@@ -35,9 +35,10 @@ function Character(config) {
 function Hero(config) {
 
   var defaults = {name: "I'm a hero"};
-  this.attack = function (){
-    badguy.health -= Math.floor(15 * this.power);
-
+  this.attack = function (target){
+    console.log(target.health);
+    target.health -= Math.floor(15 * this.power);
+    console.log(target.health);
   // hero should have name
   // health variable?? or just same as default??
   // weapons
@@ -69,6 +70,7 @@ var goodguy = new Hero();
 // console.log("jock",jock)
 // Hero's List
 var jock = new Hero();
+jock.name = "jock";
 jock.displayName = "Brad";
 jock.image = "https://pbs.twimg.com/profile_images/1303351825/8bit-JaredFace_400x400.jpg";
 var rebel = new Hero();
@@ -106,10 +108,8 @@ Villain.new = function() {
 };
 
 // Hero create Test
-var badguy = Villain.new();
-badguy.name = 'bad guy';
-badguy.attack = function (){
-  goodguy.health -= Math.floor(15 * this.power);
+Villain.prototype.attack = function (target){
+  target.health -= Math.floor(15 * this.power);
 };
 
 // Villains List
@@ -126,7 +126,7 @@ var corpse = Villain.new();
 corpse.name = "Living Corpse";
 
 var villainArray = [clown, chainsaw, knives, corpse];
-console.log(villainArray);
+// console.log(villainArray);
 // console.log(badguy);
 // console.log("name",badguy.name,"health", badguy.health);
 
@@ -138,5 +138,5 @@ module.exports = {
   'prep' : prep,
   'nerd' : nerd,
   'goodguy': goodguy,
-  'badguy': badguy
+  // 'badguy': badguy
 };
