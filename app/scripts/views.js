@@ -33,12 +33,17 @@ function heroView(character){
   $('.hero-info').html(heroTemplate(character));
 }
 
+function endView(){
+  location.reload();
+}
+
 // enemyView(models.badguy);
 // heroView(models.goodguy);
 
 module.exports = {
   'enemyView': enemyView,
-  'heroView': heroView
+  'heroView': heroView,
+  'endView' : endView
 };
 
 // console.log(models.herosArray);

@@ -216,8 +216,12 @@ function counterAttack(defenseMod){
 function checkWin(){
   if (currentVillain.health <= 0){
     console.log("Player Wins");
+    views.endView();
+
   } else if (models.goodguy.health <= 0){
     console.log("Bad Guy wins");
+    views.endView();
+
   }
 }
 //display winner and loser
