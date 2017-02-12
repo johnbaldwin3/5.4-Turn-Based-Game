@@ -28,6 +28,7 @@ body{
   background-image: url('../images/creepycabin.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
+
 }
 
 .fight-screen{
@@ -256,9 +257,49 @@ h1{
 }
 
 .option-menu {
-    margin-top: 20px;
-    width: 15%;
-    border: 1px solid white;
-    padding-bottom: 16px;
-    margin-left: 8%;
+  width: 100%;
+  margin-top: 20px;
+  width: 20%;
+  box-shadow: inset 0px 20px 20px 7px white;
+  border: 1px solid white;
+  padding-bottom: 16px;
+  margin-left: 4%;
+}
+
+.option-menu button {
+  justify-content: center;
+}
+.fight-btn {
+  // width: 250px;
+  height: 40px;
+  width: 90%;
+  background: linear-gradient(#f400ff 20%, #ff0099 30%, black);
+  border: 1px solid black;
+  box-shadow: -1px 3px 20px 10px rgba(0, 255, 255, 0.22);
+  font-family: 'Nosifer', cursive;
+  font-size: 14px;
+  font-weight: 400;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+
+}
+
+.strong-btn {
+  @extend .fight-btn;
+}
+
+.defense-btn {
+  @extend .fight-btn;
+}
+
+.quick-btn {
+  @extend .fight-btn;
+}
+
+.option-menu button {
+  display: flex;
+  flex: auto;
+  margin: 0 auto;
+  text-align: center;
 }
