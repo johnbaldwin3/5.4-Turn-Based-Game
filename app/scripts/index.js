@@ -16,23 +16,30 @@ var $audioIntro = $('#audio-intro');
 //   $audioIntro.stop();
 // })
 
+function audioFade() {
+
+return  $audioIntro.animate({volume: 0.0}, 3000);
+ // Pause after 2.1 seconds
+ //  setTimeout( function() {
+ //    $audioIntro.get(0).pause(); // .get gets the native DOM element
+ // }, 2000)
+}
 /***********************************
 //game start
 ***********************************/
 
 //start game
   //select button and direct to new page
-  // $('.into-game').on('click', function(event){
-  //   event.preventDefault();
-  //   var url = "select.html"
-  //   $("#audioIntro").volume = 1;
-  //       $("#audioIntro").animate({volume: 0}, 4000);
-  //   setTimeout(function() {
-  //      window.location = url;
-  //
-  //   }, 3000);
-  //
-  // })
+  $('.into-game').on('click', function(event){
+    event.preventDefault();
+    var url = "select.html";
+    audioFade();
+    setTimeout(function() {
+       window.location = url;
+
+    }, 5000);
+
+  })
   //cue music?
   //direct to player selection screen
     //click button to go
