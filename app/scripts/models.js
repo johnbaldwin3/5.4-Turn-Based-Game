@@ -115,7 +115,7 @@ Villain.prototype.attack = function (target){
 // Villains List
 var clown = Villain.new();
 clown.name = "Creepy Clown";
-clown.image = "http://orig13.deviantart.net/274e/f/2012/067/c/8/scary_clown_bit_by_karinagarcia-d4s6lpf.jpg"
+clown.image = "http://orig13.deviantart.net/274e/f/2012/067/c/8/scary_clown_bit_by_karinagarcia-d4s6lpf.jpg";
 clown.speed = 90;
 clown.health = 115;
 
@@ -123,21 +123,21 @@ var chainsaw = Villain.new();
 chainsaw.name = "Chainsaw Maniac";
 chainsaw.power = 2;
 chainsaw.speed = 75;
-chainsaw.image = "http://orig07.deviantart.net/0114/f/2014/296/0/1/leatherface_by_8_bitavatars-d83v7w8.png"
+chainsaw.image = "http://orig07.deviantart.net/0114/f/2014/296/0/1/leatherface_by_8_bitavatars-d83v7w8.png";
 
 
 var knives = Villain.new();
 knives.name = "Knife-Hand";
 knives.speed = 130;
 knives.health = 90;
-knives.image = "http://scontent.cdninstagram.com/t51.2885-15/s480x480/e35/12940211_1724245117797619_163580205_n.jpg?ig_cache_key=MTIyNDI3OTAzODQzMjQ4NTU0NQ%3D%3D.2"
+knives.image = "http://scontent.cdninstagram.com/t51.2885-15/s480x480/e35/12940211_1724245117797619_163580205_n.jpg?ig_cache_key=MTIyNDI3OTAzODQzMjQ4NTU0NQ%3D%3D.2";
 
 
 var corpse = Villain.new();
 corpse.name = "Living Corpse";
 corpse.health = 130;
 corpse.speed = 45;
-corpse.image = "http://3.bp.blogspot.com/-alJxgL8NWxc/To2QBA2bE2I/AAAAAAAAAGA/SwvxMqHWruE/s1600/Zombie+Headshot.jpg"
+corpse.image = "http://3.bp.blogspot.com/-alJxgL8NWxc/To2QBA2bE2I/AAAAAAAAAGA/SwvxMqHWruE/s1600/Zombie+Headshot.jpg";
 
 
 var villainArray = [clown, chainsaw, knives, corpse];
