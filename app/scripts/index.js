@@ -110,10 +110,21 @@ views.enemyView(currentVillain);
   //after player selects action
 
 $('.fight-btn').on('click', function (){
-  models.goodguy.attack(currentVillain);
-  console.log("attacking" + currentVillain);
-  views.enemyView(currentVillain);
-  setTimeout(function(){counterAttack();}, 500);
+  if (models.goodguy.speed >= currentVillain.speed){
+    console.log("hero first");
+    models.goodguy.attack(currentVillain);
+    views.enemyView(currentVillain);
+    checkWin();
+    counterAttack();
+    checkWin();
+  } else {
+    console.log("hero last");
+    counterAttack();
+    checkWin();
+    models.goodguy.attack(currentVillain);
+    views.enemyView(currentVillain);
+    checkWin();
+  }
 });
 
 function counterAttack(){
@@ -164,7 +175,13 @@ function counterAttack(){
 /***********************************
 //Game Over / Play Again
 ***********************************/
-
+function checkWin(){
+  if (currentVillain.health <= 0){
+    console.log("Player Wins");
+  } else if (models.goodguy.health <= 0){
+    console.log("Bad Guy wins");
+  }
+}
 //display winner and loser
 // prompt user to play again
 // show stats?

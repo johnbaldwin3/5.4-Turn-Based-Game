@@ -20,8 +20,8 @@ function Character(config) {
   var defaults = {
     name: "Character",
     health: 100,
-    power: Math.random().toFixed(2),
-    defense: 100,
+    power: 1,
+    defense: 5,
     speed: 100
   };
   $.extend(this, defaults, config);
@@ -37,7 +37,7 @@ function Hero(config) {
   var defaults = {name: "I'm a hero"};
   this.attack = function (target){
     console.log(target.health);
-    target.health -= Math.floor(15 * this.power);
+    target.health -= Math.floor(10 * this.power);
     console.log(target.health);
   // hero should have name
   // health variable?? or just same as default??
@@ -109,21 +109,30 @@ Villain.new = function() {
 
 // Hero create Test
 Villain.prototype.attack = function (target){
-  target.health -= Math.floor(15 * this.power);
+  target.health -= (Math.floor(15 * this.power)-target.defense);
 };
 
 // Villains List
 var clown = Villain.new();
 clown.name = "Creepy Clown";
+clown.speed = 90;
+clown.health = 115;
 
 var chainsaw = Villain.new();
 chainsaw.name = "Chainsaw Maniac";
+chainsaw.power = 2;
+chainsaw.speed = 75;
 
 var knives = Villain.new();
 knives.name = "Knife-Hand";
+knives.speed = 130;
+knives.health = 90;
 
 var corpse = Villain.new();
 corpse.name = "Living Corpse";
+corpse.health = 130;
+corpse.speed = 45;
+
 
 var villainArray = [clown, chainsaw, knives, corpse];
 // console.log(villainArray);
