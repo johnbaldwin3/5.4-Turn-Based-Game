@@ -22,7 +22,8 @@ function Character(config) {
     health: 100,
     power: 1,
     defense: 5,
-    speed: 100
+    speed: 100,
+    equipment: "none"
   };
   $.extend(this, defaults, config);
 
@@ -36,10 +37,11 @@ function Hero(config) {
 
   var defaults = {name: "I'm a hero"};
   this.attack = function (target, powerMod){
-    var attDamage = (10*this.power)+powerMod;
+    var attDamage = this.power+powerMod;
     // console.log(target.health);
     target.health -= attDamage;
     // console.log(target.health);
+    console.log("hero attacks");
     $('.combat-log').append("You hit " + target.name + " for " + attDamage);
   // hero should have name
   // health variable?? or just same as default??
@@ -75,18 +77,34 @@ var jock = new Hero();
 jock.name = "jock";
 jock.displayName = "Brad";
 jock.image = "https://pbs.twimg.com/profile_images/1303351825/8bit-JaredFace_400x400.jpg";
+jock.health += _.random(5,15);
+jock.speed += _.random(1,10);
+jock.power = 9 + _.random(1,3);
+jock.equipment = "Baseball Bat";
 var rebel = new Hero();
 rebel.name = "rebel";
 rebel.displayName = "James";
 rebel.image = "http://blog.spoongraphics.co.uk/wp-content/uploads/2013/04/pixel-character.jpg";
+rebel.power = 8 + _.random(1,4);
+rebel.health += _.random(5,10);
+rebel.equipment = "Switchblade";
 var prep = new Hero();
 prep.name = "prep";
 prep.displayName = "Tiffany";
- prep.image = "http://static.tumblr.com/qj6i2rb/Mxnmc71sl/untitled.jpg";//"https://www.google.com/imgres?imgurl=https%3A%2F%2Fs-media-cache-ak0.pinimg.com%2Foriginals%2Ff5%2F04%2F6c%2Ff5046cdd7f0aaa7bd1e5a6a5a4077caf.jpg&imgrefurl=https%3A%2F%2Fuk.pinterest.com%2Fpin%2F279223245618096969%2F&docid=WgEFABijoTHnkM&tbnid=mbhpHzk855IvCM%3A&vet=1&w=500&h=500&bih=659&biw=1280&q=8%20bit%20girl%20image&ved=0ahUKEwj51dqr_IXSAhWJiFQKHT6MAPoQMwgdKAEwAQ&iact=mrc&uact=8"
+prep.image = "http://static.tumblr.com/qj6i2rb/Mxnmc71sl/untitled.jpg";//"https://www.google.com/imgres?imgurl=https%3A%2F%2Fs-media-cache-ak0.pinimg.com%2Foriginals%2Ff5%2F04%2F6c%2Ff5046cdd7f0aaa7bd1e5a6a5a4077caf.jpg&imgrefurl=https%3A%2F%2Fuk.pinterest.com%2Fpin%2F279223245618096969%2F&docid=WgEFABijoTHnkM&tbnid=mbhpHzk855IvCM%3A&vet=1&w=500&h=500&bih=659&biw=1280&q=8%20bit%20girl%20image&ved=0ahUKEwj51dqr_IXSAhWJiFQKHT6MAPoQMwgdKAEwAQ&iact=mrc&uact=8"
+prep.defense += _.random(1,5);
+prep.power = 8 + _.random(1,3);
+prep.health += _.random(1,10);
+prep.equipment = "Hairspray & Lighter";
 var nerd = new Hero();
 nerd.name = "nerd";
 nerd.displayName = "Dexter";
 nerd.image = "https://www.abeautifulsite.net/content/uploads/2014/08/bit-face.png";
+nerd.speed += _.random(10,30);
+nerd.power = 7 + _.random(1,4);
+nerd.health += _.random(1,5);
+nerd.defense += _.random(1,3);
+nerd.equipment = "Really sharp #2 pencil";
 
 var herosArray = [jock,rebel,prep,nerd];
 

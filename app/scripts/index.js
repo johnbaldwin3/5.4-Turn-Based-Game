@@ -148,13 +148,13 @@ $('.fight-btn').on('click', function (){
     models.goodguy.attack(currentVillain, d6());
     views.enemyView(currentVillain);
     checkWin();
-    counterAttack(0);
+    setTimeout(counterAttack(0), 1000);
     checkWin();
   } else {
     console.log("hero last");
     counterAttack(0);
     checkWin();
-    models.goodguy.attack(currentVillain, d6());
+    setTimeout(models.goodguy.attack(currentVillain, d6()), 1000);
     views.enemyView(currentVillain);
     checkWin();
   }
@@ -164,7 +164,7 @@ $('.strong-btn').on('click', function (){
   console.log("hero last");
   counterAttack(-d6());
   checkWin();
-  models.goodguy.attack(currentVillain, d12());
+  setTimeout(models.goodguy.attack(currentVillain, d12()), 1000);
   views.enemyView(currentVillain);
   checkWin();
 });
@@ -175,13 +175,13 @@ $('.defense-btn').on('click', function (){
     models.goodguy.attack(currentVillain, -d4());
     views.enemyView(currentVillain);
     checkWin();
-    counterAttack(d10());
+    setTimeout(counterAttack(d10()), 1000);
     checkWin();
   } else {
     console.log("hero last");
     counterAttack(d10());
     checkWin();
-    models.goodguy.attack(currentVillain, -d4());
+    setTimeout(models.goodguy.attack(currentVillain, -d4()), 1000);
     views.enemyView(currentVillain);
     checkWin();
   }
@@ -192,7 +192,7 @@ $('.quick-btn').on('click', function (){
   models.goodguy.attack(currentVillain, -d4());
   views.enemyView(currentVillain);
   checkWin();
-  counterAttack(0);
+  setTimeout(counterAttack(0), 1000);
   checkWin();
 });
 // console.log(dice);
@@ -201,6 +201,7 @@ $('.quick-btn').on('click', function (){
 function counterAttack(defenseMod){
   // console.log(dice.d4, dice.d6, dice.d8, dice.d10, dice.d12, dice.d20);
   currentVillain.attack(models.goodguy, defenseMod);
+  console.log("counter attack run");
   views.heroView(models.goodguy);
 }
 //
@@ -256,6 +257,8 @@ function checkWin(){
     console.log("Bad Guy wins");
     views.endView();
 
+  } else {
+    console.log("win checked");
   }
 }
 //display winner and loser
