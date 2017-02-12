@@ -24,7 +24,7 @@ body{
 }
 
 .fight-page{
-  padding-top: 50px;
+  padding-top: 5px;
   background-image: url('../images/creepycabin.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -41,6 +41,7 @@ body{
 
 .fight-pic{
   width: 300px;
+  height: 300px;
 }
 
 
@@ -74,13 +75,22 @@ h1{
     }
 }
 
+.enemy-health{
+  background-color: #b72828;
+}
 
 .health-bar{
   background-color: #b72828;
 }
 
 .option-menu{
-  border: 1px solid #333333;
+  margin-top: 20px;
+  border: 1px solid white;
+
+  button{
+    background-color: Black;
+    margin-left: 30px;
+  }
 }
 
 .moves{
