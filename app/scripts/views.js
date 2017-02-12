@@ -34,7 +34,7 @@ function heroView(character){
 }
 
 function endView(){
-  location.reload();
+  // location.reload();
 }
 
 // enemyView(models.badguy);

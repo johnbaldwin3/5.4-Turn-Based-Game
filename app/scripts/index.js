@@ -6,6 +6,7 @@ var Handlebars = require('handlebars');
 var index = require('../scripts/index.js');
 var views = require('../scripts/views.js');
 var $audioIntro = $('#audio-intro');
+// var dice = require('../scripts/randomizer.js');
 // var hero = require('app/templates/hero.hbs');
 // var enemy = require('../templates/enemy.hbs');
 
@@ -15,6 +16,30 @@ var $audioIntro = $('#audio-intro');
 // $('into-game').on('click', function(){
 //   $audioIntro.stop();
 // })
+
+// **************************************
+//  Dice Roller
+// **************************************
+function d4 (){
+  return _.random(1,4);
+}
+function d6 (){
+  return _.random(1,6);
+}
+function d8 (){
+  return _.random(1,8);
+}
+function d10 (){
+  return _.random(1,10);
+}
+function d12 (){
+  return _.random(1,12);
+}
+function d20 (){
+  return _.random(1,20);
+}
+
+//**************************************
 
 function audioFade() {
 
@@ -39,7 +64,7 @@ return  $audioIntro.animate({volume: 0.0}, 3000);
 
     }, 5000);
 
-  })
+  });
   //cue music?
   //direct to player selection screen
     //click button to go
@@ -120,7 +145,7 @@ views.enemyView(currentVillain);
 $('.fight-btn').on('click', function (){
   if (models.goodguy.speed >= currentVillain.speed){
     console.log("hero first");
-    models.goodguy.attack(currentVillain, 0);
+    models.goodguy.attack(currentVillain, d6());
     views.enemyView(currentVillain);
     checkWin();
     counterAttack(0);
@@ -129,7 +154,7 @@ $('.fight-btn').on('click', function (){
     console.log("hero last");
     counterAttack(0);
     checkWin();
-    models.goodguy.attack(currentVillain, 0);
+    models.goodguy.attack(currentVillain, d6());
     views.enemyView(currentVillain);
     checkWin();
   }
@@ -137,9 +162,9 @@ $('.fight-btn').on('click', function (){
 
 $('.strong-btn').on('click', function (){
   console.log("hero last");
-  counterAttack(0);
+  counterAttack(-d6());
   checkWin();
-  models.goodguy.attack(currentVillain, 5);
+  models.goodguy.attack(currentVillain, d12());
   views.enemyView(currentVillain);
   checkWin();
 });
@@ -147,16 +172,16 @@ $('.strong-btn').on('click', function (){
 $('.defense-btn').on('click', function (){
   if (models.goodguy.speed >= currentVillain.speed){
     console.log("hero first");
-    models.goodguy.attack(currentVillain, -1);
+    models.goodguy.attack(currentVillain, -d4());
     views.enemyView(currentVillain);
     checkWin();
-    counterAttack(5);
+    counterAttack(d10());
     checkWin();
   } else {
     console.log("hero last");
-    counterAttack(5);
+    counterAttack(d10());
     checkWin();
-    models.goodguy.attack(currentVillain, -1);
+    models.goodguy.attack(currentVillain, -d4());
     views.enemyView(currentVillain);
     checkWin();
   }
@@ -164,16 +189,18 @@ $('.defense-btn').on('click', function (){
 
 $('.quick-btn').on('click', function (){
   console.log("hero first");
-  models.goodguy.attack(currentVillain, -1);
+  models.goodguy.attack(currentVillain, -d4());
   views.enemyView(currentVillain);
   checkWin();
   counterAttack(0);
   checkWin();
 });
+// console.log(dice);
+// console.log(dice.d4, dice.d6, dice.d8, dice.d10, dice.d12, dice.d20);
 
 function counterAttack(defenseMod){
-  currentVillain.attack(models.goodguy);
-  models.goodguy.health += defenseMod;
+  // console.log(dice.d4, dice.d6, dice.d8, dice.d10, dice.d12, dice.d20);
+  currentVillain.attack(models.goodguy, defenseMod);
   views.heroView(models.goodguy);
 }
 //

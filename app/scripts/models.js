@@ -36,9 +36,11 @@ function Hero(config) {
 
   var defaults = {name: "I'm a hero"};
   this.attack = function (target, powerMod){
-    console.log(target.health);
-    target.health -= Math.floor((10 * this.power + powerMod));
-    console.log(target.health);
+    var attDamage = (10*this.power)+powerMod;
+    // console.log(target.health);
+    target.health -= attDamage;
+    // console.log(target.health);
+    $('.combat-log').append("You hit " + target.name + " for " + attDamage);
   // hero should have name
   // health variable?? or just same as default??
   // weapons
@@ -108,8 +110,10 @@ Villain.new = function() {
 };
 
 // Hero create Test
-Villain.prototype.attack = function (target){
-  target.health -= (Math.floor(15 * this.power)-target.defense);
+Villain.prototype.attack = function (target, defBonus){
+  var attDamage = (15 * this.power) - target.defense - defBonus;
+  target.health -= attDamage;
+  $('.combat-log').append("You were hit for " + attDamage);
 };
 
 // Villains List
