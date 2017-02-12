@@ -1,6 +1,6 @@
 //console.log("Hello World!");
 var models = require('../scripts/models');
-var $ = require('jquery');
+var $ = window.$ = window.jQuery = require('jquery');
 var _ = require('underscore');
 var Handlebars = require('handlebars');
 var index = require('../scripts/index.js');
