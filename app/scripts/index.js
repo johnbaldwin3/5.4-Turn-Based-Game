@@ -34,12 +34,7 @@ function d20 (){
 $('.end-page').hide();
 
 function audioFade() {
-
-return  $audioIntro.animate({volume: 0.0}, 3000);
- // Pause after 2.1 seconds
- //  setTimeout( function() {
- //    $audioIntro.get(0).pause(); // .get gets the native DOM element
- // }, 2000)
+ $('#audio-intro').animate({volume: 0.0}, 1000);
 }
 /***********************************
 //game start
@@ -47,14 +42,14 @@ return  $audioIntro.animate({volume: 0.0}, 3000);
 
 //start game
   //select button and direct to new page
-  $('.into-game').on('click', function(event){
+  $('.into-game').on('click', function(event) {
     event.preventDefault();
     var url = "select.html";
     audioFade();
     setTimeout(function() {
        window.location = url;
 
-    }, 1000);
+    }, 3000);
 
   });
   //cue music?
