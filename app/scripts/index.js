@@ -6,6 +6,7 @@ var Handlebars = require('handlebars');
 var index = require('../scripts/index.js');
 var views = require('../scripts/views.js');
 var $audioIntro = $('#audio-intro');
+var $audio = $('#sound-1');
 
 
 //************************************
@@ -47,6 +48,8 @@ function audioFade() {
      $('.background-splash ').animate({ 'zoom': 1.5 }, 1000);
       $('.background-splash ').animate({ 'zoom': 0.2 }, 3000);
     var url = "select.html";
+    // $audio.attr('src', './images/Door-Squeak-2.mp3');
+    // $audio[0].play();
     audioFade();
     setTimeout(function() {
        window.location = url;
@@ -89,7 +92,6 @@ $('.character-select').on('click','.hero-select', function (event){
   $('.character-select').fadeOut(4000).hide();
   $('body').removeClass('.character-select');
   $('.fight-page').fadeIn(4000).show();
-
   var selected = $(this).attr("id");
   // console.log("ss",selected);
 
