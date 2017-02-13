@@ -1,0 +1,37 @@
+<div  class="col-md-4 {{name}}">
+  <a class ="hero-select" href="fight.html" id="{{name}}">
+    <div class="player-option">
+      <div class="name-info">
+        <div class ="name-tile">
+          <div class="character-name ">
+            <h3 class="disp-name">{{displayName}}</h3>
+          </div>
+
+          <div class="character-type">
+            <h5>{{class}}</h5>
+          </div>
+        </div>
+        <div class="char-pic">
+          <img src="{{ image }}" alt="">
+        </div>
+      </div>
+      <div class="character-stats">
+        <div class="health stat">
+          Health: {{health}}
+        </div>
+        <div class="power stat">
+          Attack Power: {{power}}
+        </div>
+        <div class="defense stat">
+          Defense: {{defense}}
+        </div>
+        <div class="speed stat">
+          Speed: {{speed}}
+        </div>
+      </div>
+      <div class="equipment">
+        Equipment: {{equipment}}
+      </div>
+    </div>
+  </a>
+</div>

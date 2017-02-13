@@ -1,0 +1,406 @@
+
+// Bootstrap Variables
+$icon-font-path: '../../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
+
+// Import Bootstrap
+@import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
+
+/***********************************
+//FIGHT HTML SCREEN
+***********************************/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+body{
+  color:white;
+  background-color: #090A0C;
+}
+
+.fight-page{
+  padding-top: 5px;
+  background-image: url('../images/creepycabin.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+.fight-screen{
+  padding-top: 100px;
+  background-color: rgba(9, 9, 9, 0.59);  padding:10px;
+  box-shadow: 1px 1px 38px #18ecb2;
+  margin-bottom: 30px;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.fight-pic{
+  width: 300px;
+  height: 300px;
+}
+
+
+h1{
+  text-align: center;
+}
+
+.player-option{
+  border: 1px solid #333333;
+}
+
+.enemy-info{
+  box-shadow: 0px 1px 20px 0px #fd0000;
+  border: 1px solid #bf4141;
+  margin: 0 auto;
+  width: 90%;
+  margin-left: 40px;
+  h2 {
+    text-align: center;
+  }
+}
+
+.enemy-pic{
+  float: right;
+
+}
+
+.animate-box{
+  position: absolute;
+  top: 165px;
+
+}
+
+.attack-box:hover{
+  width: 190px;
+}
+
+.attack-box{
+  background: red;
+  position: relative;
+
+}
+
+.claw1{
+  height: 20px;
+  width: 10px;
+  transition: width 4s height 2s background-color 2s transform 4s;
+}
+
+.claw2{
+  height: 20px;
+  width: 10px;
+  top: 5px;
+  transition: width 4s height 2s background-color 2s transform 4s;
+}
+
+.claw3{
+  height: 20px;
+  width: 10px;
+  top: 10px;
+  transition: width 4s height 2s background-color 2s transform 4s;
+}
+
+.hero-info{
+  margin-left: 40px;
+  margin-top: 20px;
+  margin-bottom:20px;
+  box-shadow: 0px 4px 19px 1px #86d8f1;
+  border: 1px solid #2b88cc;
+    h2 {
+      text-align: center;
+    }
+}
+
+.enemy-health{
+  background-color: #b72828;
+}
+
+.health-bar{
+  background-color: #b72828;
+}
+
+.option-menu{
+  margin-top: 20px;
+  border: 1px solid white;
+
+  button{
+    background-color: Black;
+    margin-left: 30px;
+  }
+}
+
+.moves{
+  color: white;
+}
+
+.combat-log{
+  border: 1px solid #FFFFFF;
+  color:white;
+}
+
+/***********************************
+//INTRO / INDEX PAGE STYLINGS
+***********************************/
+
+
+.background-splash {
+
+  color: red;
+  background-size: cover;
+  background-image: url('../images/backgroundhall.jpeg');
+  // background-repeat: no-repeat;
+
+}
+.splash-header {
+  margin-top: 20%;
+  font-family: 'Monoton', cursive;
+  font-size: 50px;
+  color: #ff0099;
+  text-shadow: 0px 20px 20px rgba(123, 71, 150, 0.74);
+  letter-spacing: 1px;
+  word-spacing: 14px;
+}
+.subheader {
+  font-family: 'Fascinate Inline', cursive;
+  text-shadow: 0px 20px 20px rgba(123, 71, 150, 0.74);
+  color: #a4f9d3;
+  text-align: center;
+  letter-spacing: 4px;
+  word-spacing: 16px;
+  margin-bottom: 40px;
+}
+
+.intro-button-div {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.into-game {
+  width: 250px;
+  height: 40px;
+  background: linear-gradient(#f400ff 20%, #ff0099 30%, black);
+  border: 1px solid black;
+  box-shadow: -1px 3px 20px 10px rgba(0, 255, 255, 0.22);
+    a{
+      font-family: 'Nosifer', cursive;
+      font-size: 20px;
+      font-weight: 600;
+      color: white;
+      text-decoration: none;
+    }
+}
+
+/*************************************
+* Character Select
+**************************************/
+
+.character-select-title {
+  font-family: 'Monoton', cursive;
+    letter-spacing: 2px;
+    color: red;
+    word-spacing: 16px;
+    text-shadow: 1px 11px 20px rgba(255, 0, 0, 0.69);
+}
+
+
+.player-option{
+  background-color: rgba(9, 9, 9, 0.59);  padding:10px;
+  box-shadow: 1px 1px 8px #fff;
+  margin-bottom: 30px;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.player-option:hover {
+  background-color: rgba(82, 77, 77, 0.7);  padding:10px;
+  box-shadow: 1px 1px 15px #bdde90;
+}
+
+.character-stats{
+
+}
+
+.character-type{
+
+}
+
+.character-name{
+
+}
+
+.name-tile{
+  display: inline-block;
+}
+
+.name-info{
+  display: inline-block;
+  width: 100%
+}
+
+.char-pic{
+  display: inline-block;
+  float: right;
+  img {
+    max-height: 150px;
+  }
+}
+
+.stat{
+  border:1px solid black;
+  display: inline-block;
+  // margin-left:2%;
+  // margin-right:2%;
+  width:49.4%;
+  height:40px;
+}
+
+.health{
+  font-weight: 600;
+  background-color: rgba(255, 0, 0, 0.73);
+}
+
+.power{
+  font-weight: 600;
+  background-color: rgba(255, 143, 0, 0.8);
+}
+
+.defense{
+  font-weight: 600;
+  background-color: rgba(193, 58, 163, 0.83);
+}
+
+.speed{
+  font-weight: 600;
+  background-color: rgba(45, 237, 177, 0.64);
+}
+
+.char-select-body {
+  background-image: url('../images/select-screen.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+.fight-header {
+  margin-top: 10px;
+  @extend .splash-header;
+
+}
+
+.option-menu {
+  width: 100%;
+  margin-top: 20px;
+  width: 20%;
+  box-shadow: inset 0px 20px 20px 7px rgba(255, 255, 255, 0.67);
+  border: 1px solid white;
+  padding-bottom: 16px;
+  margin-left: 3%;
+}
+
+.option-menu button {
+  justify-content: center;
+}
+.fight-btn {
+  // width: 250px;
+  height: 40px;
+  width: 90%;
+  background: linear-gradient(#f400ff 20%, #ff0099 30%, black);
+  border: 1px solid black;
+  box-shadow: -1px 3px 20px 10px rgba(0, 255, 255, 0.22);
+  font-family: 'Nosifer', cursive;
+  font-size: 14px;
+  font-weight: 400;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+
+}
+
+.strong-btn {
+  @extend .fight-btn;
+}
+
+.defense-btn {
+  @extend .fight-btn;
+}
+
+.quick-btn {
+  @extend .fight-btn;
+}
+
+.option-menu button {
+  display: flex;
+  flex: auto;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.enemy-name-tag {
+  font-family: 'Nosifer', cursive;
+  text-shadow: 0px 13px 20px rgba(226, 32, 32, 0.77);
+}
+
+.hero-name-tag {
+  font-family: 'Fascinate Inline', cursive;
+  letter-spacing: 2px;
+  text-shadow: 0px 11px 19px rgba(3, 125, 232, 0.71);
+  font-size: 38px;
+}
+
+.disp-name {
+  @extend .hero-name-tag;
+}
+
+.instructions {
+  text-align: center;
+  font-size: 18px;
+}
+
+.enem {
+  float: right;
+}
+
+.game-over{
+  text-align: center;
+}
+
+.g-over {
+  @extend .character-select-title;
+  font-size: 60px;
+}
+
+.player-win-display {
+  font-family: 'Fascinate Inline', cursive;
+  letter-spacing: 2px;
+  text-shadow: 0px 20px 19px rgba(3, 125, 232, 0.71);
+  font-size: 60px;
+}
+
+.player-lose-display {
+  font-family: 'Nosifer', cursive;
+  font-size: 50px;
+  letter-spacing: 2px;
+  text-shadow: 0px 13px 20px rgba(226, 32, 32, 0.77);
+
+}
+.play-again-btn {
+  @extend .fight-btn;
+  width: 40%;
+}
+
+.enemy-last-move {
+  color:  #e46e69;
+  text-align: center;
+}
+
+.hero-last-move {
+  color: #74beff;
+  text-align: center;
+}
