@@ -239,10 +239,11 @@ function counterAttack(defenseMod){
 /***********************************
 //Game Over / Play Again
 ***********************************/
+var playerWin;
 function checkWin(){
   if (currentVillain.health <= 0){
     console.log("Player Wins");
-    var playerWin = true;
+    playerWin = true;
     views.endView(playerWin);
 
   } else if (models.goodguy.health <= 0){

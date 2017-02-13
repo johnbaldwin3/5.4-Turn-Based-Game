@@ -7,6 +7,7 @@ var models = require('../scripts/models');
 var heroTemplate = require('../templates/hero.hbs');
 var enemyTemplate = require('../templates/enemy.hbs');
 var charSelTemp = require('../templates/heroselect.hbs');
+var endTemplate = require('../templates/endgame.hbs');
 
 
 // $('.fight-page').html().hide();
@@ -34,9 +35,10 @@ function heroView(character){
 }
 
 function endView(playerWin){
-  // playerWin ? alert("you survived") : alert("there are no survivors")
+  playerWin ? $(".player-win-display").append("You survived this time...") : $(".player-lose-display").append("There were no survivors...")
   $('.fight-page').fadeOut(4000).hide();
   $('.end-page').fadeIn(4000).show();
+
 }
 
 $('.play-again-btn').on('click', function(){
