@@ -29,7 +29,6 @@ function enemyView(character){
   // console.log(character);
 
   $('.enemy-info').html(enemyTemplate(character));
-  $('.enemy-health').width(models.currentVillain.health);
 
 }
 //Hero Display
@@ -37,6 +36,15 @@ function heroView(character){
   // console.log(character);
   $('.hero-info').html(heroTemplate(character));
 }
+
+// function updateEnemyHealth(){
+//   var health = index.currentVillain.health;
+//   $('.enemy-health').width(health);
+// }
+
+// updatePlayerHealth(character){
+//
+// }
 
 function endView(playerWin){
   $('.fight-page').fadeOut(2000).hide();
@@ -62,7 +70,8 @@ module.exports = {
   'enemyView': enemyView,
   'heroView': heroView,
   'endView' : endView,
-  // 'heroAttack' : heroAttack
+  // 'updateEnemyHealth' : updateEnemyHealth,
+  // "updatePlayerHealth" : updatePlayerHealth
 };
 
 // console.log(models.herosArray);
