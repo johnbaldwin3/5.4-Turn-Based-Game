@@ -53,7 +53,7 @@ return  $audioIntro.animate({volume: 0.0}, 3000);
     setTimeout(function() {
        window.location = url;
 
-    }, 5000);
+    }, 1000);
 
   });
   //cue music?

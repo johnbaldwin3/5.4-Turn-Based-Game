@@ -23,6 +23,7 @@ _.forEach(models.herosArray, function characterSelect(characters){
 // console.log(models.badguy);
 // console.log(models.goodguy);
 $('.fight-page').hide();
+$('.end-page').hide();
 //Enemy Display
 function enemyView(character){
   // console.log(character);
@@ -36,9 +37,8 @@ function heroView(character){
 
 function endView(playerWin){
   playerWin ? $(".player-win-display").append("You survived this time...") : $(".player-lose-display").append("There were no survivors...")
-  $('.fight-page').fadeOut(4000).hide();
-  $('.end-page').fadeIn(4000).show();
-
+  $('.fight-page').fadeOut(2000).hide();
+  $('.end-page').fadeIn(2000).show();
 }
 
 $('.play-again-btn').on('click', function(){
