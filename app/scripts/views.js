@@ -36,16 +36,20 @@ function heroView(character){
 }
 
 function endView(playerWin){
-
-  playerWin ? $(".player-win-display").html("You survived this time...") : $(".player-lose-display").html("There were no survivors...")
-  $('.fight-page').fadeOut(4000).hide();
-  $('.end-page').fadeIn(4000).show();
-
+  $('.fight-page').fadeOut(2000).hide();
+  $('.end-page').fadeIn(2000).show();
+  playerWin ? $(".player-win-display").append("You survived... this time...") : $(".player-lose-display").append("There were no survivors...")
 }
 
 $('.play-again-btn').on('click', function(){
   location.reload();
 })
+
+// function heroAttack(move){
+//   $(".hero-last-move").html("");
+//   $(".hero-last-move").append(index.selected + " used " + move + "!");
+//
+// }
 
 
 // enemyView(models.badguy);
@@ -54,7 +58,8 @@ $('.play-again-btn').on('click', function(){
 module.exports = {
   'enemyView': enemyView,
   'heroView': heroView,
-  'endView' : endView
+  'endView' : endView,
+  // 'heroAttack' : heroAttack
 };
 
 // console.log(models.herosArray);

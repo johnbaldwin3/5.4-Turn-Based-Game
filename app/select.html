@@ -111,19 +111,28 @@
             <div class="col-md-4 option-menu">
               <br>
               <div class="row">
-              <button type="button" name="button" class="button fight-btn">Attack!</button>
+                <button type="button" name="button" class="button fight-btn">Attack!</button>
               </div>
               <br>
               <div class="row">
-              <button type="button" name="button" class="button strong-btn">Strong Attack!</button>
+                <button type="button" name="button" class="button strong-btn">Strong Attack!</button>
               </div>
               <br>
               <div class="row">
-              <button type="button" name="button" class="button defense-btn">Defensive Strike!</button>
+                <button type="button" name="button" class="button defense-btn">Defensive Strike!</button>
               </div>
               <br>
               <div class="row">
-              <button type="button" name="button" class="button quick-btn">Quick Punch!</button>
+                <button type="button" name="button" class="button quick-btn">Quick Punch!</button>
+              </div>
+              <br>
+              <div class="row">
+                  <div class="combat-log">
+                    <div class="hero-last-move">
+                    </div>
+                    <div class="enemy-last-move">
+                    </div>
+                  </div>
               </div>
             </div>
           </div>
@@ -132,11 +141,10 @@
           <div class="row">
             <div class="col-md-12">
               <div class="combat-log">
-                <!-- <ul>
-                  <li>Last Action</li>
-                  <li>Next to Last Action</li>
-                  <li>another Action</li>
-                </ul> -->
+                <div class="hero-last-move">
+                </div>
+                <div class="enemy-last-move">
+                </div>
               </div>
             </div>
           </div>
@@ -145,8 +153,10 @@
       <div class="container-fluid wrapper end-page">
         <div class="game-over container">
           <br>
+
           <h2 class ="g-over"> Game Over </h2>
          <br>
+
           <div class ="player-win-display">
           </div>
           <div class = "player-lose-display">
@@ -155,6 +165,7 @@
             <!-- <endgame.hbs  HB template for who won> -->
           </div>
           <br>
+
 
           <button type="button" name="button" class="button play-again-btn">Play Again?</button>
       </div>

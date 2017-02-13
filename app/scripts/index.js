@@ -137,6 +137,7 @@ views.enemyView(currentVillain);
 $('.fight-btn').on('click', function (){
   if (models.goodguy.speed >= currentVillain.speed){
     console.log("hero first");
+    // view.heroAttack("Attack")
     models.goodguy.attack(currentVillain, d6());
     views.enemyView(currentVillain);
     checkWin();
@@ -246,14 +247,18 @@ function checkWin(){
     console.log("Player Wins");
     playerWin = true;
     views.endView(playerWin);
+    $('.option-menu').fadeOut(500).hide();
+
 
   } else if (models.goodguy.health <= 0){
     console.log("Bad Guy wins");
     playerWin = false;
     views.endView(playerWin);
+    $('.option-menu').fadeOut(500).hide();
+
 
   } else {
-    console.log("win checked");
+    console.log("tie");
   }
 }
 //display winner and loser

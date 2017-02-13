@@ -42,7 +42,8 @@ function Hero(config) {
     target.health -= attDamage;
     // console.log(target.health);
     console.log("hero attacks");
-    $('.combat-log').append("You hit " + target.name + " for " + attDamage);
+    $('.hero-last-move').html('');
+    $('.hero-last-move').append("You hit " + target.name + " for " + attDamage);
   // hero should have name
   // health variable?? or just same as default??
   // weapons
@@ -98,7 +99,7 @@ prep.health += _.random(1,10);
 prep.equipment = "Hairspray & Lighter";
 var nerd = new Hero();
 nerd.name = "nerd";
-nerd.displayName = "Dexter";
+nerd.displayName = "Dan";
 nerd.image = "https://www.abeautifulsite.net/content/uploads/2014/08/bit-face.png";
 nerd.speed += _.random(10,30);
 nerd.power = 7 + _.random(1,4);
@@ -131,7 +132,8 @@ Villain.new = function() {
 Villain.prototype.attack = function (target, defBonus){
   var attDamage = (15 * this.power) - target.defense - defBonus;
   target.health -= attDamage;
-  $('.combat-log').append("You were hit for " + attDamage);
+  $('.enemy-last-move').html('');
+  $('.enemy-last-move').append("You were hit for " + attDamage);
 };
 
 // Villains List
@@ -149,7 +151,7 @@ chainsaw.image = "http://orig07.deviantart.net/0114/f/2014/296/0/1/leatherface_b
 
 
 var knives = Villain.new();
-knives.name = "Knife-Hand";
+knives.name = "Scary Terry";
 knives.speed = 130;
 knives.health = 90;
 knives.image = "http://scontent.cdninstagram.com/t51.2885-15/s480x480/e35/12940211_1724245117797619_163580205_n.jpg?ig_cache_key=MTIyNDI3OTAzODQzMjQ4NTU0NQ%3D%3D.2";
