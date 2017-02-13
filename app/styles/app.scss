@@ -330,3 +330,11 @@ h1{
 .enem {
   float: right;
 }
+
+.game-over{
+  text-align: center;
+}
+
+.play-again-btn {
+  @extend .fight-btn;
+}

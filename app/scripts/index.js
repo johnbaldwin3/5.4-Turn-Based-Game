@@ -242,11 +242,13 @@ function counterAttack(defenseMod){
 function checkWin(){
   if (currentVillain.health <= 0){
     console.log("Player Wins");
-    views.endView();
+    var playerWin = true;
+    views.endView(playerWin);
 
   } else if (models.goodguy.health <= 0){
     console.log("Bad Guy wins");
-    views.endView();
+    playerWin = false;
+    views.endView(playerWin);
 
   } else {
     console.log("win checked");

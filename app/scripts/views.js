@@ -33,10 +33,16 @@ function heroView(character){
   $('.hero-info').html(heroTemplate(character));
 }
 
-function endView(){
-  alert('you won, or lost...');
-  // location.reload();
+function endView(playerWin){
+  // playerWin ? alert("you survived") : alert("there are no survivors")
+  $('.fight-page').fadeOut(4000).hide();
+  $('.end-page').fadeIn(4000).show();
 }
+
+$('.play-again-btn').on('click', function(){
+  location.reload();
+})
+
 
 // enemyView(models.badguy);
 // heroView(models.goodguy);
