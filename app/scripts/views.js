@@ -25,10 +25,10 @@ $('.fight-page').hide();
 $('.end-page').hide();
 //Enemy Display
 function enemyView(character,health){
-  health = health || {}
+  health = health || {};
   // console.log(character);
   $('.enemy-info').html(enemyTemplate(character));
-  var health = character.health + '%';
+  health = character.health + '%';
   $('.enemy-health').width(health);
 
 }
@@ -54,7 +54,7 @@ function endView(playerWin){
   $('.fight-page').fadeOut(2000).hide();
   $('.end-page').fadeIn(2000).show();
 
-  playerWin ? $(".player-win-display").append("You defeated the horror.. or did you?...") : $(".player-lose-display").append("There were no survivors...")
+  playerWin ? $(".player-win-display").append("You defeated the horror.. or did you?...") : $(".player-lose-display").append("There were no survivors...");
 }
 
 $('.play-again-btn').on('click', function(){
