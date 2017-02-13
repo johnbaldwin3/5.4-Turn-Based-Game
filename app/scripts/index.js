@@ -196,6 +196,16 @@ function counterAttack(defenseMod){
   console.log("counter attack run");
   views.heroView(models.goodguy);
 }
+
+/***********************************
+Attack Animation
+************************************/
+
+function attackAnimation(){
+  // $('.attack-box').
+}
+
+
 //
 // function attackEnemy (character){
 //   console.log(models.badguy.health, models.goodguy.health);

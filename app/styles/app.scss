@@ -71,6 +71,42 @@ h1{
 
 }
 
+.animate-box{
+  position: absolute;
+  top: 165px;
+
+}
+
+.attack-box:hover{
+  width: 190px;
+}
+
+.attack-box{
+  background: red;
+  position: relative;
+
+}
+
+.claw1{
+  height: 20px;
+  width: 10px;
+  transition: width 4s height 2s background-color 2s transform 4s;
+}
+
+.claw2{
+  height: 20px;
+  width: 10px;
+  top: 5px;
+  transition: width 4s height 2s background-color 2s transform 4s;
+}
+
+.claw3{
+  height: 20px;
+  width: 10px;
+  top: 10px;
+  transition: width 4s height 2s background-color 2s transform 4s;
+}
+
 .hero-info{
   margin-left: 40px;
   margin-top: 20px;
