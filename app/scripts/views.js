@@ -3,7 +3,6 @@ var _ = require('underscore');
 var Handlebars = require('handlebars');
 var index = require('../scripts/index.js');
 var models = require('../scripts/models');
-
 var heroTemplate = require('../templates/hero.hbs');
 var enemyTemplate = require('../templates/enemy.hbs');
 var charSelTemp = require('../templates/heroselect.hbs');
@@ -25,16 +24,20 @@ _.forEach(models.herosArray, function characterSelect(characters){
 $('.fight-page').hide();
 $('.end-page').hide();
 //Enemy Display
-function enemyView(character){
+function enemyView(character,health){
+  health = health || {}
   // console.log(character);
-
   $('.enemy-info').html(enemyTemplate(character));
+  var health = character.health + '%';
+  $('.enemy-health').width(health);
 
 }
 //Hero Display
 function heroView(character){
   // console.log(character);
   $('.hero-info').html(heroTemplate(character));
+  var health = character.health + '%';
+  $('.health-bar').width(health);
 }
 
 // function updateEnemyHealth(){

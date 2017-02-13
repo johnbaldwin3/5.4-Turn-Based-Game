@@ -130,10 +130,6 @@ views.enemyView(currentVillain);
 
 //player must select fight action
   //after player selects action
-  function updateEnemyHealth(){
-    var health = currentVillain.health;
-    $('.enemy-health').width(health);
-  }
 
 $('.fight-btn').on('click', function (){
   if (models.goodguy.speed >= currentVillain.speed){
@@ -141,7 +137,6 @@ $('.fight-btn').on('click', function (){
     // view.heroAttack("Attack")
     models.goodguy.attack(currentVillain, d6());
     views.enemyView(currentVillain);
-    updateEnemyHealth();
     checkWin();
     setTimeout(counterAttack(0), 1000);
     checkWin();
@@ -151,7 +146,6 @@ $('.fight-btn').on('click', function (){
     checkWin();
     setTimeout(models.goodguy.attack(currentVillain, d6()), 1000);
     views.enemyView(currentVillain);
-    updateEnemyHealth();
     checkWin();
   }
 });
@@ -162,7 +156,6 @@ $('.strong-btn').on('click', function (){
   checkWin();
   setTimeout(models.goodguy.attack(currentVillain, d12()), 1000);
   views.enemyView(currentVillain);
-  updateEnemyHealth();
   checkWin();
 });
 
@@ -171,7 +164,6 @@ $('.defense-btn').on('click', function (){
     console.log("hero first");
     models.goodguy.attack(currentVillain, -d4());
     views.enemyView(currentVillain);
-    updateEnemyHealth();
     checkWin();
     setTimeout(counterAttack(d10()), 1000);
     checkWin();
@@ -181,7 +173,6 @@ $('.defense-btn').on('click', function (){
     checkWin();
     setTimeout(models.goodguy.attack(currentVillain, -d4()), 1000);
     views.enemyView(currentVillain);
-    updateEnemyHealth();
     checkWin();
   }
 });
@@ -190,7 +181,6 @@ $('.quick-btn').on('click', function (){
   console.log("hero first");
   models.goodguy.attack(currentVillain, -d4());
   views.enemyView(currentVillain);
-  updateEnemyHealth();
   checkWin();
   setTimeout(counterAttack(0), 1000);
   checkWin();
@@ -277,4 +267,4 @@ function checkWin(){
 
 module.exports = {
   "currentVillain" : currentVillain
-}
+};
