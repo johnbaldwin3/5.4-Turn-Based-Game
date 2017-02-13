@@ -44,6 +44,8 @@ function audioFade() {
   //select button and direct to new page
   $('.into-game').on('click', function(event) {
     event.preventDefault();
+     $('.background-splash ').animate({ 'zoom': 1.5 }, 1000);
+      $('.background-splash ').animate({ 'zoom': 0.2 }, 3000);
     var url = "select.html";
     audioFade();
     setTimeout(function() {
