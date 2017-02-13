@@ -36,9 +36,11 @@ function heroView(character){
 }
 
 function endView(playerWin){
-  playerWin ? $(".player-win-display").append("You survived this time...") : $(".player-lose-display").append("There were no survivors...")
-  $('.fight-page').fadeOut(2000).hide();
-  $('.end-page').fadeIn(2000).show();
+
+  playerWin ? $(".player-win-display").html("You survived this time...") : $(".player-lose-display").html("There were no survivors...")
+  $('.fight-page').fadeOut(4000).hide();
+  $('.end-page').fadeIn(4000).show();
+
 }
 
 $('.play-again-btn').on('click', function(){

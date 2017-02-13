@@ -335,6 +335,26 @@ h1{
   text-align: center;
 }
 
+.g-over {
+  @extend .character-select-title;
+  font-size: 60px;
+}
+
+.player-win-display {
+  font-family: 'Fascinate Inline', cursive;
+  letter-spacing: 2px;
+  text-shadow: 0px 20px 19px rgba(3, 125, 232, 0.71);
+  font-size: 60px;
+}
+
+.player-lose-display {
+  font-family: 'Nosifer', cursive;
+  font-size: 50px;
+  letter-spacing: 2px;
+  text-shadow: 0px 13px 20px rgba(226, 32, 32, 0.77);
+
+}
 .play-again-btn {
   @extend .fight-btn;
+  width: 40%;
 }

@@ -31,6 +31,7 @@ function d20 (){
 }
 
 //**************************************
+$('.end-page').hide();
 
 function audioFade() {
 
