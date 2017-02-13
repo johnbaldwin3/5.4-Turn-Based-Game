@@ -40,6 +40,7 @@ function heroView(character){
   $('.health-bar').width(health);
 }
 
+
 // function updateEnemyHealth(){
 //   var health = index.currentVillain.health;
 //   $('.enemy-health').width(health);
@@ -52,7 +53,8 @@ function heroView(character){
 function endView(playerWin){
   $('.fight-page').fadeOut(2000).hide();
   $('.end-page').fadeIn(2000).show();
-  playerWin ? $(".player-win-display").append("You survived... this time...") : $(".player-lose-display").append("There were no survivors...");
+
+  playerWin ? $(".player-win-display").append("You defeated the horror.. or did you?...") : $(".player-lose-display").append("There were no survivors...")
 }
 
 $('.play-again-btn').on('click', function(){
