@@ -27,7 +27,10 @@ $('.end-page').hide();
 //Enemy Display
 function enemyView(character){
   // console.log(character);
+
   $('.enemy-info').html(enemyTemplate(character));
+  $('.enemy-health').width(models.currentVillain.health);
+
 }
 //Hero Display
 function heroView(character){

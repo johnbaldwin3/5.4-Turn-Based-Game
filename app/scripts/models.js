@@ -105,7 +105,7 @@ nerd.speed += _.random(10,30);
 nerd.power = 7 + _.random(1,4);
 nerd.health += _.random(1,5);
 nerd.defense += _.random(1,3);
-nerd.equipment = "Really sharp #2 pencil";
+nerd.equipment = "Potato Cannon";
 
 var herosArray = [jock,rebel,prep,nerd];
 
