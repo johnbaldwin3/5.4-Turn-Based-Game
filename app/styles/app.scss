@@ -358,3 +358,13 @@ h1{
   @extend .fight-btn;
   width: 40%;
 }
+
+.enemy-last-move {
+  color:  #e46e69;
+  text-align: center;
+}
+
+.hero-last-move {
+  color: #74beff;
+  text-align: center;
+}
