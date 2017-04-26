@@ -97,10 +97,7 @@ $('.character-select').on('click','.hero-select', function (event){
 
   models.goodguy = models[selected];
   console.log("goodguy", models.goodguy);
-  // console.log('gGuy', gGuy);
-  // console.log(models.goodguy);
-  // views.heroView(models.goodguy);
-  // views.heroView(models.goodguy);
+
   views.heroView(models.goodguy);
 
   // setTimeout(function() {
@@ -140,7 +137,8 @@ $('.fight-btn').on('click', function (){
     models.goodguy.attack(currentVillain, d6());
     views.enemyView(currentVillain);
     checkWin();
-    setTimeout(counterAttack(0), 1000);
+    setTimeout(//function
+      counterAttack(0), 1000);
     checkWin();
   } else {
     console.log("hero last");

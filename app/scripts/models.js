@@ -2,7 +2,6 @@ var $ = require('jquery');
 var _ = require('underscore');
 var Handlebars = require('handlebars');
 var index = require('../scripts/index.js');
-
 var hero = require('../templates/hero.hbs');
 var enemy = require('../templates/enemy.hbs');
 
@@ -55,7 +54,7 @@ function Hero(config) {
   // var character = Character.call(this, config);
   // console.log('character', character);
     $.extend(this, defaults, config);
-};
+  };
 }
 
 Hero.prototype = new Character();
